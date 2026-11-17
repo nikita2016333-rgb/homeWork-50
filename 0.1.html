@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      .main {
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        cursor: pointer;
+        background: #0e2b58;
+        border-radius: 16px;
+        color: #ffffff;
+        display: inline-block;
+        margin: 10px;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 2px #ccc;
+        width: 200px;
+        padding: 20px;
+      }
+      img {
+        border-radius: 4px;
+        width: 200px;
+        height: 285px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main" id="app"></div>
+
+    <script type="text/babel">
+      const container = document.getElementById("app");
+
+      const Card = ({ name, year, photo }) => {
+        return (
+          <div className="card">
+            <img src={photo} alt="Постер фильма" />
+            <p>Название: {name}</p>
+            <span>Год выпуска: {year}</span>
+          </div>
+        );
+      };
+
+      const cards = (
+        <div>
+          <Card
+            name="Бойцовский клуб"
+            year={1999}
+            photo={
+              "https://upload.wikimedia.org/wikipedia/ru/8/8a/Fight_club.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+            }
+          />
+          <Card
+            name="Волк с Уолл-стрит"
+            year={2013}
+            photo={
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2i8Q5677Phm-NumDfc2LJSuY6x1eL8L4nFWDu95p9Q&s"
+            }
+          />
+          <Card
+            name="Зелёная книга"
+            year={2018}
+            photo={
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rTM0_A_mjGQhusMy3zsKDXvZcNQ-bnlfgEkzh54BvexWDJr_tjxmaRo&s=10"
+            }
+          />
+        </div>
+      );
+
+      ReactDOM.createRoot(container).render(cards);
+    </script>
+  </body>
+</html>
