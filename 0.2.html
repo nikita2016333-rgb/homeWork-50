@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      const container = document.getElementById("app");
+
+      const Header = () => {
+        return (
+          <header>
+            <a href="#">S.T.A.L.K.E.R WIKI</a>
+          </header>
+        );
+      };
+      const Sidebar = () => {
+        return (
+          <div>
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Обсуждения</a>
+              </li>
+              <li>
+                <a href="#">Сообщество</a>
+              </li>
+              <li>
+                <a href="#">Игры</a>
+              </li>
+              <li>
+                <a href="#">Новости</a>
+              </li>
+            </ul>
+          </div>
+        );
+      };
+
+      const Content = () => {
+        return (
+          <div>
+            <h1>S.T.A.L.K.E.R.: Зов Припяти</h1>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj2xWb8vMk_OAM9VAFNPu-vaRpdW83RNRaxTVsKmk8vEesOZA5sN2pR_nkGoYRG9sVDfTMFhDOj8DNQKfnd7ndIbYqNAvuGINPLGfGucYe&s=10"
+              alt="Постер игры"
+            />
+            <p>
+              «S.T.A.L.K.E.R.: Зов Припяти» (рабочее название «S.T.A.L.K.E.R.:
+              Тайны Зоны») — компьютерная игра в жанре FPS (First Person
+              Shooter) от компании GSC Game World, сиквел к игре
+              «S.T.A.L.K.E.R.: Тень Чернобыля». Разработка началась незадолго до
+              выпуска «S.T.A.L.K.E.R.: Чистое Небо», 29 августа 2008-го
+              года, анонс состоялся 30 апреля 2009-го на
+              официальном сайте игры. Первый выпуск игры состоялся 2 октября
+              2009 года в странах СНГ.
+            </p>
+            <h1>Официальный список нововведений</h1>
+            <ul>
+              <li>
+                Фотореалистичная Зона отчуждения — воссозданная по реальным
+                прототипам.
+              </li>
+              <li>Новый сюжет, ряд уникальных персонажей.</li>
+              <li>Расширенная система побочных квестов.</li>
+              <li>
+                Новые монстры: химера и бюрер. Новое поведение и способности
+                некоторых мутантов.
+              </li>
+              <li>
+                Доработанная система A-Life на основе наиболее понравившихся
+                игрокам элементов первых двух игр серии.
+              </li>
+              <li>Выбросы существенно влияют на мир Зоны.</li>
+              <li>В игру добавлена функция сна.</li>
+              <li>Новый интерфейс игрока.</li>
+              <li>
+                Возможность продолжить игру после её прохождения в режиме
+                Freeplay (Свободная Игра).
+              </li>
+              <li>Игра разрабатывалась на движке X-Ray v.1.6</li>
+            </ul>
+          </div>
+        );
+      };
+      const Footer = () => {
+        return (
+          <div>
+            <p>
+              S.T.A.L.K.E.R. Wiki: Zone Chronicles — это сообщество Фэндома на
+              портале Видеоигры.
+            </p>
+          </div>
+        );
+      };
+      const App = () => {
+        return (
+          <div>
+            <Header />
+            <div>
+              <Sidebar />
+              <Content />
+            </div>
+            <Footer />
+          </div>
+        );
+      };
+
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
